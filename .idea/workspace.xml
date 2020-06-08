@@ -25,15 +25,21 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab07e9f-30c9-4a17-a439-335d090726ab" name="Default Changelist" comment="Создан проект в PyCharm">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python_training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_training.iml" afterDir="false" />
+    <list default="true" id="9ab07e9f-30c9-4a17-a439-335d090726ab" name="Default Changelist" comment="Чистка кода от не нужных команд">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +52,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1czfaaShUen64WTJdD7xtzBEK5c" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,7 +67,28 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Unittests in test_add_group.py">
+    <configuration name="group" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_training" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/group.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests in test_add_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,6 +106,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests in test_add_group.py" />
+        <item itemvalue="Python.group" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +135,35 @@
       <option name="project" value="LOCAL" />
       <updated>1591537290945</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Техническое">
+      <created>1591543126955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591543126955</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Запуск автотеста с добавлением группы">
+      <created>1591543151889</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591543151889</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Чистка кода от не используемых библиотек">
+      <created>1591543280361</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591543280361</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Чистка кода от не нужных команд">
+      <created>1591624712812</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591624712812</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,7 +181,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Улучшено описание репозитория" />
     <MESSAGE value="Создан проект в PyCharm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создан проект в PyCharm" />
+    <MESSAGE value="Техническое" />
+    <MESSAGE value="Запуск автотеста с добавлением группы" />
+    <MESSAGE value="Чистка кода от не используемых библиотек" />
+    <MESSAGE value="Чистка кода от не нужных команд" />
+    <option name="LAST_COMMIT_MESSAGE" value="Чистка кода от не нужных команд" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591536640245">
@@ -141,22 +204,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="579" y="184" key="FileChooserDialogImpl/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591541893465" />
-    <state width="1579" height="276" key="GridCell.Tab.0.bottom" timestamp="1591543025066">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1591627620063">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591543025066" />
-    <state width="1579" height="276" key="GridCell.Tab.0.center" timestamp="1591543025066">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591627620063" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1591627620062">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.0.center/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591543025066" />
-    <state width="1579" height="276" key="GridCell.Tab.0.left" timestamp="1591543025065">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591627620062" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1591627620062">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.0.left/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591543025065" />
-    <state width="1579" height="276" key="GridCell.Tab.0.right" timestamp="1591543025066">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591627620062" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1591627620063">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="276" key="GridCell.Tab.0.right/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591543025066" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591627620063" />
     <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1591543025066">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -181,29 +244,37 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="438" y="191" key="MultipleFileMergeDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591537441937" />
+    <state x="615" y="363" key="ReplaceDuplicatesPrompt" timestamp="1591626463157">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="615" y="363" key="ReplaceDuplicatesPrompt/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591626463157" />
     <state x="623" y="132" key="RollbackChangesDialog" timestamp="1591537072688">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="132" key="RollbackChangesDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591537072688" />
-    <state x="301" y="74" key="SettingsEditor" timestamp="1591542969615">
+    <state x="301" y="74" key="SettingsEditor" timestamp="1591543086733">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="301" y="74" key="SettingsEditor/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591542969615" />
+    <state x="301" y="74" key="SettingsEditor/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591543086733" />
     <state x="647" y="344" key="VCS.ChangelistChooser" timestamp="1591537037873">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="647" y="344" key="VCS.ChangelistChooser/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591537037873" />
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1591537466625">
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1591624735909">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591537466625" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591624735908" />
     <state x="609" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591536502962">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="609" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591536502962" />
-    <state x="509" y="218" key="git4idea.merge.GitPullDialog" timestamp="1591537638399">
+    <state x="509" y="218" key="git4idea.merge.GitPullDialog" timestamp="1591624726079">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="509" y="218" key="git4idea.merge.GitPullDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591537638399" />
+    <state x="509" y="218" key="git4idea.merge.GitPullDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591624726079" />
+    <state x="643" y="202" key="refactoring.ChangeSignatureDialog" timestamp="1591626991454">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="643" y="202" key="refactoring.ChangeSignatureDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591626991454" />
   </component>
 </project>
