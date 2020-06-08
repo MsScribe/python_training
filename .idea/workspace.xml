@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ab07e9f-30c9-4a17-a439-335d090726ab" name="Default Changelist" comment="Чистка кода от не нужных команд">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,7 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_add_group.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_contact.py">
     <configuration name="group" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,8 +102,25 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_add_contact.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_training" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_add_contact.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.Unittests in test_add_group.py" />
         <item itemvalue="Python.group" />
       </list>
@@ -204,22 +220,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="579" y="184" key="FileChooserDialogImpl/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591541893465" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1591627620063">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1591634336621">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591627620063" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1591627620062">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591634336621" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1591634336621">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591627620062" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1591627620062">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591634336621" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1591634336621">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591627620062" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1591627620063">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591634336621" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1591634336621">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591627620063" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591634336621" />
     <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1591543025066">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -272,9 +288,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="509" y="218" key="git4idea.merge.GitPullDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591624726079" />
-    <state x="643" y="202" key="refactoring.ChangeSignatureDialog" timestamp="1591626991454">
+    <state x="643" y="202" key="refactoring.ChangeSignatureDialog" timestamp="1591642153378">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="643" y="202" key="refactoring.ChangeSignatureDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591626991454" />
+    <state x="643" y="202" key="refactoring.ChangeSignatureDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591642153378" />
+    <state x="2372" y="307" key="refactoring.ChangeSignatureDialog/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1591631825513" />
   </component>
 </project>
