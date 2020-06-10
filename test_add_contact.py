@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
-import contact
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
-import unittest, time, re
-from contact import ContactMainInfo, ContactPhoneInfo, ContactEmail, ContactHomePage, ContactBDay, ContactADay, ContactSecInfo
+import unittest
+from contact import ContactMainInfo
 
 class TestAddContact(unittest.TestCase):
     def setUp(self):
@@ -18,18 +15,10 @@ class TestAddContact(unittest.TestCase):
         wd = self.wd
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
-        self.create_contact(wd, ContactMainInfo(firstname="FirstNameTest", middlename="MiddleNameTest",
-                                                lastname="LastNameTest", nickname="NickNameTest", title="TestTitle",
-                                                company="TestCompany", homeaddress="Test Street Test home"),
-                            ContactPhoneInfo("9998887766", "+79876543210", "+567", "3456"),
-                            ContactEmail("123qwert@test.ru",
-                                         "1234qwsa@test.com", "test123@test.ru"), ContactHomePage("hhtps://test.ru"),
-                            ContactBDay("1", "July", "1990"), ContactADay("6", "November", "1987"), ContactSecInfo("Street address",
-                            "testhome", "blablabla"))
+        self.create_contact(wd, ContactMainInfo(firstname="FirstNameTest", middlename="MiddleNameTest", lastname="LastNameTest", nickname="NickNameTest", title="TestTitle", company="TestCompany", homeaddress="Test Street Test home", homephone="9998887766", mobilephone="+79876543210", workphone="+567", faxphone="3456", email="123qwert@test.ru", email2="1234qwsa@test.com", email3="test123@test.ru", homepage="hhtps://test.ru", bday="1", bmonth="July", byear="1990", aday="6", amonth="November", ayear="1987", address2="Street address", phone2="testhome", notes="blablabla"))
         self.logout(wd)
 
-    def create_contact(self, wd, contactmaininfo, contactphone, contactemail, contacthomepage, contactbday, contactaday,
-                       contactsecinfo):
+    def create_contact(self, wd, contactmaininfo):
         # open create new contact
         wd.find_element_by_link_text("add new").click()
         # fill contact main information
@@ -41,36 +30,36 @@ class TestAddContact(unittest.TestCase):
         wd.find_element_by_name("company").send_keys(contactmaininfo.company)
         wd.find_element_by_name("address").send_keys(contactmaininfo.homeaddress)
         # fill contact phone information
-        wd.find_element_by_name("home").send_keys(contactphone.homephone)
-        wd.find_element_by_name("mobile").send_keys(contactphone.mobilephone)
-        wd.find_element_by_name("work").send_keys(contactphone.workphone)
-        wd.find_element_by_name("fax").send_keys(contactphone.faxphone)
+        wd.find_element_by_name("home").send_keys(contactmaininfo.homephone)
+        wd.find_element_by_name("mobile").send_keys(contactmaininfo.mobilephone)
+        wd.find_element_by_name("work").send_keys(contactmaininfo.workphone)
+        wd.find_element_by_name("fax").send_keys(contactmaininfo.faxphone)
         # fill contact email information
-        wd.find_element_by_name("email").send_keys(contactemail.email)
-        wd.find_element_by_name("email2").send_keys(contactemail.email2)
-        wd.find_element_by_name("email3").send_keys(contactemail.email3)
+        wd.find_element_by_name("email").send_keys(contactmaininfo.email)
+        wd.find_element_by_name("email2").send_keys(contactmaininfo.email2)
+        wd.find_element_by_name("email3").send_keys(contactmaininfo.email3)
         # fill contact homepage
-        wd.find_element_by_name("homepage").send_keys(contacthomepage.homepage)
+        wd.find_element_by_name("homepage").send_keys(contactmaininfo.homepage)
         # fill contact bday information
         wd.find_element_by_name("bday").click()
-        Select(wd.find_element_by_name("bday")).select_by_visible_text(contactbday.bday)
-        wd.find_element_by_xpath("//option[@value='" + contactbday.bday + "']").click()
+        Select(wd.find_element_by_name("bday")).select_by_visible_text(contactmaininfo.bday)
+        wd.find_element_by_xpath("//option[@value='" + contactmaininfo.bday + "']").click()
         wd.find_element_by_name("bmonth").click()
-        Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contactbday.bmonth)
-        wd.find_element_by_xpath("//option[@value='" + contactbday.bmonth + "']").click()
-        wd.find_element_by_name("byear").send_keys(contactbday.byear)
+        Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contactmaininfo.bmonth)
+        wd.find_element_by_xpath("//option[@value='" + contactmaininfo.bmonth + "']").click()
+        wd.find_element_by_name("byear").send_keys(contactmaininfo.byear)
         # fill contact anniversary
         wd.find_element_by_name("aday").click()
-        Select(wd.find_element_by_name("aday")).select_by_visible_text(contactaday.aday)
-        wd.find_element_by_xpath("(//option[@value='" + contactaday.aday + "'])[2]").click()
+        Select(wd.find_element_by_name("aday")).select_by_visible_text(contactmaininfo.aday)
+        wd.find_element_by_xpath("(//option[@value='" + contactmaininfo.aday + "'])[2]").click()
         wd.find_element_by_name("amonth").click()
-        Select(wd.find_element_by_name("amonth")).select_by_visible_text(contactaday.amonth)
-        wd.find_element_by_xpath("(//option[@value='" + contactaday.amonth + "'])[2]").click()
-        wd.find_element_by_name("ayear").send_keys(contactaday.ayear)
+        Select(wd.find_element_by_name("amonth")).select_by_visible_text(contactmaininfo.amonth)
+        wd.find_element_by_xpath("(//option[@value='" + contactmaininfo.amonth + "'])[2]").click()
+        wd.find_element_by_name("ayear").send_keys(contactmaininfo.ayear)
         # fill contact secondary information
-        wd.find_element_by_name("address2").send_keys(contactsecinfo.address2)
-        wd.find_element_by_name("phone2").send_keys(contactsecinfo.phone2)
-        wd.find_element_by_name("notes").send_keys(contactsecinfo.notes)
+        wd.find_element_by_name("address2").send_keys(contactmaininfo.address2)
+        wd.find_element_by_name("phone2").send_keys(contactmaininfo.phone2)
+        wd.find_element_by_name("notes").send_keys(contactmaininfo.notes)
         # submit contact creation
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
 
