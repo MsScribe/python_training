@@ -16,7 +16,7 @@ class Application:
 
     def create_group(self, group):
         wd = self.wd
-        self.open_home_page()
+        self.open_groups_page()
         # init group creation
         wd.find_element_by_name("new").click()
         # fill group firm

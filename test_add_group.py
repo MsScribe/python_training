@@ -13,7 +13,6 @@ def app(request):
 
 def test_add_group(app):
     app.login(username="admin", password="secret")
-    app.open_groups_page()
     app.create_group(Group(name="privet", header="privet", footer="privet"))
     app.logout()
 
