@@ -2,48 +2,47 @@ class GroupHelper:
     def __init__(self, app):
         self.app = app
 
-    def return_to_groups(self):
+    def open_groups_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
+
+    def select_first(self):
+        wd = self.app.wd
+        # select first group
+        wd.find_element_by_name("selected[]").click()
+
+    def fill(self, group):
+        wd = self.app.wd
+        # fill group firm
+        wd.find_element_by_name("group_name").send_keys(group.name)
+        wd.find_element_by_name("group_header").send_keys(group.header)
+        wd.find_element_by_name("group_footer").send_keys(group.footer)
 
     def create(self, group):
         wd = self.app.wd
         self.open_groups_page()
         # init group creation
         wd.find_element_by_name("new").click()
-        # fill group firm
-        wd.find_element_by_name("group_name").send_keys(group.name)
-        wd.find_element_by_name("group_header").send_keys(group.header)
-        wd.find_element_by_name("group_footer").send_keys(group.footer)
+        self.fill(group)
         # submit group creation
         wd.find_element_by_name("submit").click()
-        self.return_to_groups()
+        self.open_groups_page()
 
     def edit(self, group):
         wd = self.app.wd
         self.open_groups_page()
-        # select first group
-        wd.find_element_by_name("selected[]").click()
+        self.select_first()
         # edit group
         wd.find_element_by_name("edit").click()
-        # fill group firm
-        wd.find_element_by_name("group_name").send_keys(group.name)
-        wd.find_element_by_name("group_header").send_keys(group.header)
-        wd.find_element_by_name("group_footer").send_keys(group.footer)
+        self.fill(group)
         # update group creation
         wd.find_element_by_name("update").click()
-        self.return_to_groups()
-
-
-    def open_groups_page(self):
-        wd = self.app.wd
-        wd.find_element_by_link_text("groups").click()
+        self.open_groups_page()
 
     def delete_first_group(self):
         wd = self.app.wd
         self.open_groups_page()
-        # select first group
-        wd.find_element_by_name("selected[]").click()
+        self.select_first()
         # submit deletion
         wd.find_element_by_name("delete").click()
-        self.return_to_groups()
+        self.open_groups_page()
