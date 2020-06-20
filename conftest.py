@@ -3,6 +3,7 @@ from fixture.application import Application
 
 fixture = None
 
+
 # (scope="session") - запуск браузера на сессию, а не на каждый тест
 @pytest.fixture
 def app(request):
