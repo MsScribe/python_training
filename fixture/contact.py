@@ -70,26 +70,32 @@ class ContactHelper:
         self.open_contact_page()
         self.contact_cache = None
 
-    def modify_first_contact(self, contactmaininfo):
+    def modify_contact_by_index(self, index, contactmaininfo):
         wd = self.app.wd
         self.open_contact_page()
         # open edit contact
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         self.fill_contact_form(contactmaininfo)
         # submit contact creation
         wd.find_element_by_name("update").click()
         self.open_contact_page()
         self.contact_cache = None
 
-    def delete_first_contact(self):
+    def modify_first_contact(self):
+        self.modify_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.open_contact_page()
         # open edit contact
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         # delete contact
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         self.open_contact_page()
         self.contact_cache = None
+
+    def delete_first_contact(self):
+        self.delete_contact_by_index(0)
 
     def count(self):
         wd = self.app.wd
