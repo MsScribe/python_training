@@ -68,6 +68,7 @@ class ContactHelper:
         # submit contact creation
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         self.open_contact_page()
+        self.contact_cache = None
 
     def modify_first_contact(self, contactmaininfo):
         wd = self.app.wd
@@ -78,6 +79,7 @@ class ContactHelper:
         # submit contact creation
         wd.find_element_by_name("update").click()
         self.open_contact_page()
+        self.contact_cache = None
 
     def delete_first_contact(self):
         wd = self.app.wd
@@ -87,21 +89,24 @@ class ContactHelper:
         # delete contact
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         self.open_contact_page()
+        self.contact_cache = None
 
     def count(self):
         wd = self.app.wd
         self.open_contact_page()
         return len(wd.find_elements_by_xpath("//img[@alt='Edit']"))
 
+    contact_cache = None
+
     def get_contact_list(self):
-        wd = self.app.wd
-        self.open_contact_page()
-        contacts = []
-        count = len(wd.find_elements_by_xpath("//input[@name='selected[]']"))
-        # for element in wd.find_elements_by_xpath("//input[@name='selected[]']"):
-        for i in range(2, count+2):
-            lastname = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']/../../td[2]").text
-            firstname = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']/../../td[3]").text
-            id = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']").get_attribute("value")
-            contacts.append(ContactMainInfo(id=id, firstname=firstname, lastname=lastname))
-        return contacts
+        if self.contact_cache is None:
+            wd = self.app.wd
+            self.open_contact_page()
+            self.group_cache = []
+            count = len(wd.find_elements_by_xpath("//input[@name='selected[]']"))
+            for i in range(2, count+2):
+                lastname = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']/../../td[2]").text
+                firstname = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']/../../td[3]").text
+                id = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']").get_attribute("value")
+                self.group_cache.append(ContactMainInfo(id=id, firstname=firstname, lastname=lastname))
+        return list(self.group_cache)
