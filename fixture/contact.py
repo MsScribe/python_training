@@ -108,11 +108,11 @@ class ContactHelper:
         if self.contact_cache is None:
             wd = self.app.wd
             self.open_contact_page()
-            self.group_cache = []
+            self.contact_cache = []
             count = len(wd.find_elements_by_xpath("//input[@name='selected[]']"))
             for i in range(2, count+2):
                 lastname = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']/../../td[2]").text
                 firstname = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']/../../td[3]").text
                 id = wd.find_element_by_xpath("//tr[" + str(i) + "]//input[@name='selected[]']").get_attribute("value")
-                self.group_cache.append(ContactMainInfo(id=id, firstname=firstname, lastname=lastname))
-        return list(self.group_cache)
+                self.contact_cache.append(ContactMainInfo(id=id, firstname=firstname, lastname=lastname))
+        return list(self.contact_cache)
