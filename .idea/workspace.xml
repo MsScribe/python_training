@@ -25,7 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab07e9f-30c9-4a17-a439-335d090726ab" name="Default Changelist" comment="Удаление или редактирование случайного элемента" />
+    <list default="true" id="9ab07e9f-30c9-4a17-a439-335d090726ab" name="Default Changelist" comment="Испрвлено наименование кеша для контактов">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/group.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +67,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -81,8 +87,8 @@
       <recent name="C:\Python\Scripts\python_training\fixture" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_modify_contact.test_modify_contact_nickname">
-    <configuration name="pytest for test_del_contact.test_delete_some_contact" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_on_home_page.test_phones_on_home_page">
+    <configuration name="pytest for test_on_home_page.test_address_on_home_page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,11 +100,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_del_contact.test_delete_some_contact&quot;" />
+      <option name="_new_target" value="&quot;test_on_home_page.test_address_on_home_page&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_modify_contact.test_modify_contact_firstname" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_on_home_page.test_email_on_home_page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -110,11 +116,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_modify_contact.test_modify_contact_firstname&quot;" />
+      <option name="_new_target" value="&quot;test_on_home_page.test_email_on_home_page&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_modify_contact.test_modify_contact_nickname" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_on_home_page.test_first_name_on_home_page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,11 +132,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_modify_contact.test_modify_contact_nickname&quot;" />
+      <option name="_new_target" value="&quot;test_on_home_page.test_first_name_on_home_page&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_modify_group.test_modify_group_footer" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_on_home_page.test_last_name_on_home_page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,11 +148,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_modify_group.test_modify_group_footer&quot;" />
+      <option name="_new_target" value="&quot;test_on_home_page.test_last_name_on_home_page&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_modify_group.test_modify_group_name" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_on_home_page.test_phones_on_home_page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -158,17 +164,17 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_modify_group.test_modify_group_name&quot;" />
+      <option name="_new_target" value="&quot;test_on_home_page.test_phones_on_home_page&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_modify_contact.test_modify_contact_nickname" />
-        <item itemvalue="Python tests.pytest for test_modify_contact.test_modify_contact_firstname" />
-        <item itemvalue="Python tests.pytest for test_del_contact.test_delete_some_contact" />
-        <item itemvalue="Python tests.pytest for test_modify_group.test_modify_group_footer" />
-        <item itemvalue="Python tests.pytest for test_modify_group.test_modify_group_name" />
+        <item itemvalue="Python tests.pytest for test_on_home_page.test_phones_on_home_page" />
+        <item itemvalue="Python tests.pytest for test_on_home_page.test_address_on_home_page" />
+        <item itemvalue="Python tests.pytest for test_on_home_page.test_email_on_home_page" />
+        <item itemvalue="Python tests.pytest for test_on_home_page.test_last_name_on_home_page" />
+        <item itemvalue="Python tests.pytest for test_on_home_page.test_first_name_on_home_page" />
       </list>
     </recent_temporary>
   </component>
@@ -365,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593339093548</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Испрвлено наименование кеша для контактов">
+      <created>1593417142165</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1593417142165</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -381,7 +394,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Улучшено описание репозитория" />
     <MESSAGE value="Создан проект в PyCharm" />
     <MESSAGE value="Техническое" />
     <MESSAGE value="Запуск автотеста с добавлением группы" />
@@ -406,7 +418,8 @@
     <MESSAGE value="Добавление проверки в виде сравнения" />
     <MESSAGE value="Реализация кеширования и хеширования в тестах" />
     <MESSAGE value="Удаление или редактирование случайного элемента" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удаление или редактирование случайного элемента" />
+    <MESSAGE value="Испрвлено наименование кеша для контактов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Испрвлено наименование кеша для контактов" />
   </component>
   <component name="WindowStateProjectService">
     <state x="508" y="165" key="#Servers" timestamp="1592139840165">
@@ -421,10 +434,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1592157306909" />
-    <state x="14" y="508" width="1447" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1593335482134">
+    <state x="14" y="508" width="1447" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1593943921280">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="14" y="508" width="1447" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593335482134" />
+    <state x="14" y="508" width="1447" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593943921280" />
     <state x="1617" y="677" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593327911530" />
     <state x="509" y="25" key="#test_add_group_(1)" timestamp="1592142519528">
       <screen x="0" y="0" width="1600" height="860" />
@@ -446,26 +459,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="579" y="184" key="FileChooserDialogImpl/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593279211115" />
-    <state width="1579" height="210" key="GridCell.Tab.0.bottom" timestamp="1593339134199">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1899" height="210" key="GridCell.Tab.0.bottom" timestamp="1593949748573">
+      <screen x="1600" y="63" width="1920" height="1040" />
     </state>
-    <state width="1579" height="210" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593339134199" />
-    <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593327614001" />
-    <state width="1579" height="210" key="GridCell.Tab.0.center" timestamp="1593339134199">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1579" height="210" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593945717196" />
+    <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593949748573" />
+    <state width="1899" height="210" key="GridCell.Tab.0.center" timestamp="1593949748573">
+      <screen x="1600" y="63" width="1920" height="1040" />
     </state>
-    <state width="1579" height="210" key="GridCell.Tab.0.center/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593339134199" />
-    <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593327614000" />
-    <state width="1579" height="210" key="GridCell.Tab.0.left" timestamp="1593339134199">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1579" height="210" key="GridCell.Tab.0.center/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593945717196" />
+    <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593949748573" />
+    <state width="1899" height="210" key="GridCell.Tab.0.left" timestamp="1593949748573">
+      <screen x="1600" y="63" width="1920" height="1040" />
     </state>
-    <state width="1579" height="210" key="GridCell.Tab.0.left/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593339134199" />
-    <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593327614000" />
-    <state width="1579" height="210" key="GridCell.Tab.0.right" timestamp="1593339134199">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1579" height="210" key="GridCell.Tab.0.left/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593945717196" />
+    <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593949748573" />
+    <state width="1899" height="210" key="GridCell.Tab.0.right" timestamp="1593949748573">
+      <screen x="1600" y="63" width="1920" height="1040" />
     </state>
-    <state width="1579" height="210" key="GridCell.Tab.0.right/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593339134199" />
-    <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593327614001" />
+    <state width="1579" height="210" key="GridCell.Tab.0.right/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593945717196" />
+    <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1600.860/1600.63.1920.1040@1600.63.1920.1040" timestamp="1593949748573" />
     <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1592679620891">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -510,10 +523,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="647" y="344" key="VCS.ChangelistChooser/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1591537037873" />
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1593339098890">
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1593417169745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593339098890" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.63.1920.1040@0.0.1600.860" timestamp="1593417169745" />
     <state x="92" y="92" width="1416" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592140321306">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
