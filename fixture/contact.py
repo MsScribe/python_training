@@ -76,6 +76,11 @@ class ContactHelper:
         # open edit contact
         wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
 
+    def open_contact_to_edit_by_id(self, id):
+        wd = self.app.wd
+        # open edit contact
+        wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
+
     def open_contact_to_view_by_index(self, index):
         wd = self.app.wd
         self.open_contact_page()
@@ -85,6 +90,16 @@ class ContactHelper:
         wd = self.app.wd
         self.open_contact_page()
         self.open_contact_to_edit_by_index(index)
+        self.fill_contact_form(contactmaininfo)
+        # submit contact creation
+        wd.find_element_by_name("update").click()
+        self.open_contact_page()
+        self.contact_cache = None
+
+    def modify_contact_by_id(self, id, contactmaininfo):
+        wd = self.app.wd
+        self.open_contact_page()
+        self.open_contact_to_edit_by_id(id)
         self.fill_contact_form(contactmaininfo)
         # submit contact creation
         wd.find_element_by_name("update").click()
