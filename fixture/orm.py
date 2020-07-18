@@ -26,7 +26,7 @@ class ORMFixture:
         groups = Set(lambda: ORMFixture.ORMGroup, table="address_in_groups", column="group_id", reverse="contacts", lazy=True)
 
     def __init__(self, host, name, user, password):
-        self.db.bind("mysql", host=host, database=name, user=user, password=password, conv=decoders) # , conv=decoders - без него все работает. С ним ошибка ValueError: Value of unexpected type received from database: instead of datetime got <class 'str'>
+        self.db.bind("mysql", host=host, database=name, user=user, password=password) # , conv=decoders - без него все работает. С ним ошибка ValueError: Value of unexpected type received from database: instead of datetime got <class 'str'>
         self.db.generate_mapping()
         # Посмотреть выполняемый запрос
         sql_debug(True)
