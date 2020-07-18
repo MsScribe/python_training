@@ -1,6 +1,7 @@
 import pymysql.cursors
 from model.group import Group
 from model.contact import ContactMainInfo
+import re
 
 
 class DbFixture:
@@ -36,5 +37,28 @@ class DbFixture:
             cursor.close()
         return list
 
+    def get_contact_list_main_info(self, id):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("select firstname, lastname, id, home, mobile, work, phone2, email, email2, email3 from addressbook where id='%s'" % id)
+            for row in cursor:
+                (firstname, lastname, id, home, mobile, work, phone2, email, email2, email3) = row
+                list.append(ContactMainInfo(firstname=firstname, lastname=lastname, id=str(id), all_phones_from_home_page=clear(merge_phones_like_on_home_page([home, mobile, work, phone2])), all_emails_from_home_page=clear(merge_emails_like_on_home_page([email, email2, email3]))))
+        finally:
+            cursor.close()
+        return list[0]
+
     def destroy(self):
         self.connection.close()
+
+
+def clear(s):
+    return re.sub("[() - \n]", "", s)
+
+
+def merge_phones_like_on_home_page(contact):
+    return "\n".join(filter(lambda x: x != "", map(lambda x: clear(x), filter(lambda x: x is not None, contact))))
+
+def merge_emails_like_on_home_page(contact):
+    return "\n".join(filter(lambda x: x != "", map(lambda x: clear(x), filter(lambda x: x is not None, contact))))
