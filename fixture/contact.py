@@ -1,6 +1,7 @@
 from model.contact import ContactMainInfo
 from selenium.webdriver.support.select import Select
 import re
+import random
 
 
 class ContactHelper:
@@ -27,7 +28,6 @@ class ContactHelper:
             wd.find_element_by_xpath("//option[@value='" + date + "']").click()
 
     def fill_contact_form(self, contactmaininfo):
-        wd = self.app.wd
         # fill contact main information
         self.change_field_value("firstname", contactmaininfo.firstname)
         self.change_field_value("middlename", contactmaininfo.middlename)
@@ -60,12 +60,29 @@ class ContactHelper:
         self.change_field_value("phone2", contactmaininfo.phone2)
         self.change_field_value("notes", contactmaininfo.notes)
 
+    def select_group(self, group_name):
+        wd = self.app.wd
+        wd.find_element_by_name("new_group").click()
+        Select(wd.find_element_by_name("new_group")).select_by_visible_text(group_name)
+
     def create(self, contactmaininfo):
         wd = self.app.wd
         self.open_contact_page()
         # open create new contact
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(contactmaininfo)
+        # submit contact creation
+        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+        self.open_contact_page()
+        self.contact_cache = None
+
+    def create_in_group(self, contactmaininfo, group_name):
+        wd = self.app.wd
+        self.open_contact_page()
+        # open create new contact
+        wd.find_element_by_link_text("add new").click()
+        self.fill_contact_form(contactmaininfo)
+        self.select_group(group_name)
         # submit contact creation
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         self.open_contact_page()

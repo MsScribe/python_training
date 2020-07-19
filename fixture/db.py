@@ -1,7 +1,10 @@
 import pymysql.cursors
 from model.group import Group
 from model.contact import ContactMainInfo
+from model.contact_in_group import ContactInGroup
 import re
+from pony.orm import *
+from fixture.orm import ORMFixture
 
 
 class DbFixture:
@@ -51,6 +54,18 @@ class DbFixture:
 
     def destroy(self):
         self.connection.close()
+
+    def get_contacts_in_groups_list(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("select id, group_id from address_in_groups") # where group_id='%s' % groupid
+            for row in cursor:
+                (id, group_id) = row
+                list.append(ContactInGroup(id=str(id), group_id=str(group_id)))
+        finally:
+            cursor.close()
+        return list
 
 
 def clear(s):
