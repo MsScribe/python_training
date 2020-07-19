@@ -1,6 +1,5 @@
 from model.contact import ContactMainInfo
 from model.group import Group
-from model.contact_in_group import ContactInGroup
 import random
 
 

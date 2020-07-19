@@ -2,7 +2,7 @@ from datetime import datetime
 from pony.orm import *
 from model.group import Group
 from model.contact import ContactMainInfo
-from pymysql.converters import decoders
+# from pymysql.converters import decoders
 
 
 class ORMFixture:
@@ -26,7 +26,7 @@ class ORMFixture:
         groups = Set(lambda: ORMFixture.ORMGroup, table="address_in_groups", column="group_id", reverse="contacts", lazy=True)
 
     def __init__(self, host, name, user, password):
-        self.db.bind("mysql", host=host, database=name, user=user, password=password) # , conv=decoders - без него все работает. С ним ошибка ValueError: Value of unexpected type received from database: instead of datetime got <class 'str'>
+        self.db.bind("mysql", host=host, database=name, user=user, password=password) # , conv=decoders - без него все работает. Лучше его не указывать
         self.db.generate_mapping()
         # Посмотреть выполняемый запрос
         sql_debug(True)
@@ -57,4 +57,4 @@ class ORMFixture:
     @db_session
     def get_contacts_not_in_group(self, group):
         orm_group = list(select(g for g in ORMFixture.ORMGroup if g.id == group.id))[0]
-        return self.convert_contacts_to_model(select(c for c in ORMFixture.ORMContact if c.deprecated is None and orm_group not  in c.groups))
+        return self.convert_contacts_to_model(select(c for c in ORMFixture.ORMContact if c.deprecated is None and orm_group not in c.groups))
