@@ -88,6 +88,17 @@ class ContactHelper:
         self.open_contact_page()
         self.contact_cache = None
 
+    def connect_in_group(self, contact_id, group_id):
+        wd = self.app.wd
+        self.open_contact_page()
+        # Выбрать контакт без группы
+        wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
+        # Выбрать группу без контакта
+        wd.find_element_by_name("to_group").click()
+        Select(wd.find_element_by_name("to_group")).select_by_value(group_id)
+        # Сохранить
+        wd.find_element_by_name("add").click()
+
     def open_contact_to_edit_by_index(self, index):
         wd = self.app.wd
         # open edit contact

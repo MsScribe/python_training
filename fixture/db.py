@@ -65,6 +65,29 @@ class DbFixture:
             cursor.close()
         return list
 
+    def get_groups_not_in_contacts(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("(SELECT gr.group_id, gr.group_name, gr.group_header, gr.group_footer FROM group_list gr LEFT OUTER JOIN address_in_groups adingr ON gr.group_id=adingr.group_id WHERE adingr.group_id is NULL) UNION ALL (SELECT gr.group_id, gr.group_name, gr.group_header, gr.group_footer FROM group_list gr RIGHT OUTER JOIN address_in_groups adingr ON gr.group_id=adingr.group_id WHERE gr.group_id is NULL)")
+            for row in cursor:
+                (group_id, name, header, footer) = row
+                list.append(Group(id=str(group_id), name=name, header=header, footer=footer))
+        finally:
+            cursor.close()
+        return list
+
+    def get_contacts_not_in_groups(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("(SELECT c.id, c.firstname, c.lastname FROM addressbook c LEFT OUTER JOIN address_in_groups adingr ON c.id=adingr.id WHERE adingr.id is NULL) UNION ALL (SELECT c.id, c.firstname, c.lastname FROM addressbook c RIGHT OUTER JOIN address_in_groups adingr ON c.id=adingr.id WHERE c.id is NULL)")
+            for row in cursor:
+                (id, firstname, lastname) = row
+                list.append(ContactMainInfo(id=str(id), firstname=firstname, lastname=lastname))
+        finally:
+            cursor.close()
+        return list
 
 def clear(s):
     return re.sub("[() - \n]", "", s)
