@@ -1,0 +1,148 @@
+{
+  "uid" : "35c2d120873a425a",
+  "name" : "test_add_contact_in_group",
+  "fullName" : "test.test_add_contact#test_add_contact_in_group",
+  "historyId" : "61447008142683878b2d31d25111bbf0",
+  "time" : {
+    "start" : 1597076619883,
+    "stop" : 1597076629692,
+    "duration" : 9809
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [106:131, 107...:133, 116:140] == [106:131, 107...:133, 116:178]\n  At index 3 diff: 116:140 != 116:178\n  Use -v to get the full diff",
+  "statusTrace" : "app = <fixture.application.Application object at 0x03EAAFA0>, db = <fixture.db.DbFixture object at 0x03EAAD48>, check_ui = False\n\n    def test_add_contact_in_group(app, db, check_ui):\n        # Получить список групп\n        group_list = db.get_group_list()\n        contact = ContactMainInfo(firstname=\"FirstNameTest\", middlename=\"MiddleNameTest\", lastname=\"LastNameTest\", nickname=\"NickNameTest\", title=\"TestTitle\", company=\"TestCompany\", homeaddress=\"Test Street Test home\", homephone=\"9998887766\", mobilephone=\"+79876543210\", workphone=\"+567\", faxphone=\"3456\", email=\"123qwert@test.ru\", email2=\"1234qwsa@test.com\", email3=\"test123@test.ru\", homepage=\"hhtps://test.ru\", bday=\"1\", bmonth=\"July\", byear=\"1990\", aday=\"6\", amonth=\"November\", ayear=\"1987\", address2=\"Street address\", phone2=\"testhome\", notes=\"blablabla\")\n        # Создать группу если групп нет\n        if len(group_list) == 0:\n            app.group.create(Group(name=\"TestName\", header=\"TestHeader\", footer=\"TestFooter\"))\n            group_list = db.get_group_list()\n        # Выбрать рандомную группу\n        group_name = random.choice(group_list)\n        old_contacts = db.get_contact_list()\n        old_contacts_in_group = db.get_contacts_in_groups_list()\n        # Добавление контакта\n        app.open_home_page()\n        app.contact.create_in_group(contact, group_name.name)\n        new_contacts = db.get_contact_list()\n        old_contacts.append(contact)\n        assert sorted(old_contacts, key=ContactMainInfo.id_or_max) == sorted(new_contacts, key=ContactMainInfo.id_or_max)\n        old_contacts_in_group.append(ContactInGroup(id=new_contacts[-1].id, group_id=group_name.id))\n>       assert sorted(db.get_contacts_in_groups_list(), key=ContactInGroup.id_or_max) == sorted(old_contacts_in_group, key=ContactInGroup.id_or_max)\nE       assert [106:131, 107...:133, 116:140] == [106:131, 107...:133, 116:178]\nE         At index 3 diff: 116:140 != 116:178\nE         Use -v to get the full diff\n\ntest\\test_add_contact.py:43: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "app",
+    "time" : {
+      "start" : 1597076619573,
+      "stop" : 1597076619882,
+      "duration" : 309
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "stop",
+    "time" : {
+      "start" : 1597076566305,
+      "stop" : 1597076566305,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1597076566306,
+      "stop" : 1597076566316,
+      "duration" : 10
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "check_ui",
+    "time" : {
+      "start" : 1597076619882,
+      "stop" : 1597076619883,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1597076630909,
+      "stop" : 1597076633255,
+      "duration" : 2346
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1597076630907,
+      "stop" : 1597076630907,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_contact"
+  }, {
+    "name" : "host",
+    "value" : "RUDSDW026897"
+  }, {
+    "name" : "thread",
+    "value" : "1981340-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_add_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "35c2d120873a425a.json",
+  "parameterValues" : [ ]
+}
